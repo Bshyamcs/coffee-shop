@@ -1,0 +1,25 @@
+{
+  "name": "chikmagalur-franchise",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chikmagalur Filter Coffee - franchise-first website (Vercel + Redis)",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o public/styles.css --minify",
+    "test": "node test/run.js && node test/ui.js",
+    "test:api": "node test/run.js",
+    "test:ui": "node test/ui.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.34.0",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17",
+    "jsdom": "^25.0.0"
+  }
+}
